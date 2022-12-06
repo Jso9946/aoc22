@@ -1,1 +1,49 @@
+#include <iostream>
+using namespace std;
 
+int main() {
+
+bool ship[row][column] = {
+{0, 1, 0, 0},
+{0, 0, 1, 0},
+{0, 0, 0, 0},
+{1, 0, 0, 0}
+},
+
+int hits = 0;
+int numberofturns = 0;
+
+while (hits < 4){
+
+int row, column;
+
+cout << "Selecting coordinates..." << endl;
+
+cout << "Choose the coordinate for row between 1 and 4: " << endl;
+cin >> ship[row];
+
+cout << "Choose the coordinate for column between 1 and 4: " << endl;
+cin >> ship[column];
+
+if (ship[row][column]) {
+
+ship[row][column] = 0;
+
+hits++;
+
+cout << "You did it!" << (3-hits) << " left.\n\n";
+
+} else { 
+
+cout << "Miss!\n\n";
+
+}
+
+numberofturns++;
+
+}
+
+cout << "Victory! You have destroyed all the ships within " << numberofturns << " turns." << endl;
+
+return 0;
+}
