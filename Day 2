@@ -1,0 +1,46 @@
+# include <iostream>
+# include <string>
+# include <cmath>
+
+int mian () {
+int sum = 0;
+
+while (getline(data, mytext)) {
+
+int A, Y = 1;
+int B, X = 2;
+int C, Z = 3;
+
+for (getline(data, mytext) = X) {
+
+sum += X;
+
+}
+
+for (getline(data, mytext) = Y) {
+
+sum += Y;
+
+}
+
+for (getline(data, mytext) = Z) {
+
+sum += Z;
+
+}
+
+if (mytext[i] > mytext[i+1]) {
+sum += 0;
+}
+
+if (mytext[i] = mytext[i+1]) {
+sum += 3;
+}
+
+if (mytext[i] < mytext[i+1]) {
+sum += 6;
+}
+
+cout << sum;
+
+return 0; }
