@@ -1,6 +1,29 @@
-#include <iostream>;
-#include <string>;
+
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
-int main() {
+int main(){
+  string num_string;
+  int num;
+  ifstream data("input.txt");
+
+  int total = 0;
+  int max = 0;
+  while (getline(data, num_string)){
+    if (num_string.empty()){
+      if (total > max){
+        max = total;
+      }
+      total = 0;
+    }
+    else {
+      num = stoi(num_string);
+      total += num;
+
+    }
+  }
+  cout << max;
+  return 0;
+  }
